@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div class"form-group">
+        <label for="n1">Nota1</label>
+        <input type="number" class="form-control" ng-model="n1" name="n1">
+    </div>
+    <div class"form-group">
+            <label for="n2">Nota2</label>
+            <input type="number" class="form-control" ng-model="n2" name="n2">
+        </div>
+        <div class"form-group">
+                <label for="n3">Nota3</label>
+                <input type="number" class="form-control" ng-model="n3" name="n3">
+            </div>
+            <div class"form-group">
+                    <label for="n4">Nota4</label>
+                    <input type="number" class="form-control" ng-model="n4" name="n4">
+                    
+                </div>
+                <button class="btn btn-primary"> calcular</button>
+            </form>
+            <script>
+            var app = angular.module("myApp",[]);
+            app.controller("ctrl53",function($scope){
+                $scope.media = function(v1, v2 , v3, v4){
+                    let m = (v1+v2+v3+v4)/4;
+                    if (m >= 5)
+                    return "<p class=' alert alert-sucess'>  aprovado por"+ m +" pontos</p>";
+                    return "<p class=' alert alert-sucess'>  reprovado por"+ m +" pontos</p>"; 
+                }
+            })
+            </script>
+                             
+</body>
+</html>
